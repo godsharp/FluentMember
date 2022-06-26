@@ -21,20 +21,13 @@ stages:
     pool:
       vmImage: 'windows-latest'
     jobs:
-      - job: Compile
-        displayName: 'Compile'
-        dependsOn: [  ]
-        steps:
-          - task: CmdLine@2
-            inputs:
-              script: './build.cmd Initial Clean Restore Compile --skip'
       - job: Artifacts
         displayName: 'Artifacts'
         dependsOn: [  ]
         steps:
           - task: CmdLine@2
             inputs:
-              script: './build.cmd Copy Artifacts --skip'
+              script: './build.cmd Initial Clean Restore Compile Copy Artifacts --skip'
           - task: PublishBuildArtifacts@1
             inputs:
               artifactName: artifacts
@@ -45,20 +38,13 @@ stages:
     pool:
       vmImage: 'ubuntu-latest'
     jobs:
-      - job: Compile
-        displayName: 'Compile'
-        dependsOn: [  ]
-        steps:
-          - task: CmdLine@2
-            inputs:
-              script: './build.cmd Initial Clean Restore Compile --skip'
       - job: Artifacts
         displayName: 'Artifacts'
         dependsOn: [  ]
         steps:
           - task: CmdLine@2
             inputs:
-              script: './build.cmd Copy Artifacts --skip'
+              script: './build.cmd Initial Clean Restore Compile Copy Artifacts --skip'
           - task: PublishBuildArtifacts@1
             inputs:
               artifactName: artifacts
@@ -69,20 +55,13 @@ stages:
     pool:
       vmImage: 'macOS-latest'
     jobs:
-      - job: Compile
-        displayName: 'Compile'
-        dependsOn: [  ]
-        steps:
-          - task: CmdLine@2
-            inputs:
-              script: './build.cmd Initial Clean Restore Compile --skip'
       - job: Artifacts
         displayName: 'Artifacts'
         dependsOn: [  ]
         steps:
           - task: CmdLine@2
             inputs:
-              script: './build.cmd Copy Artifacts --skip'
+              script: './build.cmd Initial Clean Restore Compile Copy Artifacts --skip'
           - task: PublishBuildArtifacts@1
             inputs:
               artifactName: artifacts
