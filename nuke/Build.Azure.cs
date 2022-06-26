@@ -6,8 +6,8 @@
     AzurePipelinesImage.UbuntuLatest,
     AzurePipelinesImage.MacOsLatest,
     AutoGenerate = true,
-    InvokedTargets = new[] { nameof(Compile), nameof(Artifacts) },
-    NonEntryTargets = new[] { nameof(Initial), nameof(Clean), nameof(Restore), nameof(Copy) },
+    InvokedTargets = new[] { nameof(Artifacts) },
+    NonEntryTargets = new[] { nameof(Initial), nameof(Clean), nameof(Restore), nameof(Compile), nameof(Copy) },
     CacheKeyFiles = new string[0]
 )]
 internal partial class Build

@@ -119,8 +119,8 @@ internal partial class Build : NukeBuild
     private Target Artifacts => _ => _
         .DependsOn(Copy)
         .OnlyWhenStatic(() => IsServerBuild)
+        .OnlyWhenStatic(() => GlobFiles(OutputDirectory, "**/*.nupkg").Count() > 0)
         .Produces(ArtifactsDirectory / "**.nupkg")
-        //.OnlyWhenStatic(() => HostType == HostType.AzurePipelines)
         .Description("Upload Artifacts")
         .Executes(() =>
         {
