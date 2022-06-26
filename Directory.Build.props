@@ -12,8 +12,10 @@
     <Copyright>Copyright © GodSharp 2022</Copyright>
     <Description>Source Generator for Fluent Member produced by GodSharp</Description>
     <PackageTags>FluentMember;SourceGenerator;GodSharp;</PackageTags>
-    <PackageReleaseNotes>add #pragma warning disable CS1591</PackageReleaseNotes>
-    <Version>2022.206.26-preview6</Version>
+    <PackageReleaseNotes>
+      add #pragma warning disable CS1591
+    </PackageReleaseNotes>
+    <Version>2022.206.26</Version>
   </PropertyGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)icon.png" Pack="true" Visible="false" PackagePath="" />
