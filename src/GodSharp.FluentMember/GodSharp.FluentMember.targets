@@ -1,0 +1,24 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <IncludePackageReferencesDuringMarkupCompilation>true</IncludePackageReferencesDuringMarkupCompilation>
+    <!-- these two properties must be left to the discretion of the maintainer of the main project: -->
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>$(BaseIntermediateOutputPath)FluentMember</CompilerGeneratedFilesOutputPath>
+  </PropertyGroup>
+
+  <Target Name="RemoveSourceGeneratedFiles" BeforeTargets="CoreCompile">
+    <ItemGroup>
+      <Compile Remove="$(BaseIntermediateOutputPath)FluentMember/**/*.FluentMember.g.cs" />
+    </ItemGroup>
+  </Target>
+
+  <Target Name="AddSourceGeneratedFiles" AfterTargets="CoreCompile">
+    <ItemGroup>
+      <Compile Include="$(BaseIntermediateOutputPath)FluentMember/**/*.FluentMember.g.cs" />
+    </ItemGroup>
+  </Target>
+
+  <ItemGroup>
+    <None Include="$(BaseIntermediateOutputPath)FluentMember/**/*.FluentMember.g.cs" LinkBase="FluentMember" />
+  </ItemGroup>
+</Project>

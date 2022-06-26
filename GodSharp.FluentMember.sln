@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31410.414
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5519F789-6124-4D6F-8908-455A64E911EB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GodSharp.FluentMember", "src\GodSharp.FluentMember\GodSharp.FluentMember.csproj", "{C53C3118-4093-4ADB-88DF-10B42E68DFC9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{2026E955-7DC6-49AC-BD3E-28DB385149D7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GodSharp.FluentMember.Test", "test\GodSharp.FluentMember.Test\GodSharp.FluentMember.Test.csproj", "{365799D0-C908-48D6-AFDE-DC17FA526586}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GodSharp.FluentMember.Generator", "src\GodSharp.FluentMember.Generator\GodSharp.FluentMember.Generator.csproj", "{6D247511-F722-4C7F-AD74-10DE15EE3FE8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NukeBuild", "nuke\NukeBuild.csproj", "{04E22D3D-EC8F-4419-9311-7CFB10978189}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{20783192-650E-4EAE-BA22-FF34EAFD1E41}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{BA4174FD-7387-4310-9E06-DE554377C6B0}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		.release = .release
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C53C3118-4093-4ADB-88DF-10B42E68DFC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C53C3118-4093-4ADB-88DF-10B42E68DFC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C53C3118-4093-4ADB-88DF-10B42E68DFC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C53C3118-4093-4ADB-88DF-10B42E68DFC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{365799D0-C908-48D6-AFDE-DC17FA526586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{365799D0-C908-48D6-AFDE-DC17FA526586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{365799D0-C908-48D6-AFDE-DC17FA526586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{365799D0-C908-48D6-AFDE-DC17FA526586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D247511-F722-4C7F-AD74-10DE15EE3FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D247511-F722-4C7F-AD74-10DE15EE3FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D247511-F722-4C7F-AD74-10DE15EE3FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D247511-F722-4C7F-AD74-10DE15EE3FE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04E22D3D-EC8F-4419-9311-7CFB10978189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04E22D3D-EC8F-4419-9311-7CFB10978189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C53C3118-4093-4ADB-88DF-10B42E68DFC9} = {5519F789-6124-4D6F-8908-455A64E911EB}
+		{365799D0-C908-48D6-AFDE-DC17FA526586} = {2026E955-7DC6-49AC-BD3E-28DB385149D7}
+		{6D247511-F722-4C7F-AD74-10DE15EE3FE8} = {5519F789-6124-4D6F-8908-455A64E911EB}
+		{04E22D3D-EC8F-4419-9311-7CFB10978189} = {20783192-650E-4EAE-BA22-FF34EAFD1E41}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {39E343E7-9FB3-4DD4-AB45-9C9921A40AFD}
+	EndGlobalSection
+EndGlobal
